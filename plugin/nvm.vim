@@ -35,8 +35,8 @@ endfunction
 "
 "@returns {void}
 function! NvmUse()
-  let nodeVersion = "v" . system('cat ./.nvmrc')
-  call NvmSelect(l:nodeVersion)
+  let nodeVersion = substitute(system('cat ./.nvmrc'), '\n\+$', '', '')
+  call NvmSelect("v" . l:nodeVersion)
 endfunction
 
 command! -nargs=0 NvmList call NvmList()
