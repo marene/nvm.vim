@@ -10,7 +10,7 @@ You'll need to [install nvm](https://github.com/creationix/nvm#installation) fir
 
 After this is done, you will need to create a symlink to one of your nvm node version that will be accessible from your $PATH, so that `which node` returns that symlink's path:
 ```
-$> mkdir -p ~/.config/nvmim/bin #This path is used by default by the plugin
+$> mkdir -p ~/.config/nvim/bin #This path is used by default by the plugin
 $> nvm install 8.12.0
 $> ln -snf ~/.nvm/versions/node/v8.12.0/bin/node ~/.config/nvim/bin/node
 ```
